@@ -1,0 +1,32 @@
+# Application Apache directives
+
+# Load using:
+#	# Riverslice
+#	Include /path/to/riverslice/.httpd.conf.extract.txt
+#	Use MacroRiverslice /calculators/riverslice "/path/to/riverslice" "/path/to/site/:/path/to/riverslice/:/path/to/php/libraries/"
+
+
+<Macro MacroRiverslice $baseUrl $repoPath $includePath>
+	
+	# Include path
+	<LocationMatch $baseUrl>
+		php_value include_path "$includePath"
+	</LocationMatch>
+	
+	# Front controller application support
+	Use MacroFrontControllerApplication "$baseUrl/" "Riverslice"
+	
+	# Application routing
+	RewriteRule ^$baseUrl/about.html $baseUrl/index.html?action=about [L]
+	RewriteRule ^$baseUrl/export.html $baseUrl/index.html?export [L]
+	
+	# Exporting, ensuring there is no auto-prepended/appended content
+	<Location $baseUrl/export.html>
+		php_value auto_prepend_file none
+		php_value auto_append_file none
+	</Location>
+	
+	# Assets
+	Alias $baseUrl/equations.pdf $repoPath/equations.pdf
+	
+</Macro>

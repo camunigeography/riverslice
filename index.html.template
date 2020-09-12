@@ -1,0 +1,10 @@
+<?php
+
+# Settings, if any
+$settings = array ();
+
+# Load and run the application with the above settings
+require_once ('riverslice.php');
+new riverslice ($settings);
+
+?>
