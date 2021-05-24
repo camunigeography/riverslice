@@ -279,12 +279,12 @@ class riverslice extends frontControllerApplication
 		
 		# Check that the 
 		if ($data['stageorarea'][0] <= 0) {
-			$error = $this->throwError(11);
+			$error = $this->throwError (11);
 		} else {
 			
 			# Produce a warning (not a 'stop' error) if more than one area has been entered
 			if (isSet ($data['stageorarea'][1])) {
-				$error = $this->throwError(7);
+				$error = $this->throwError (7);
 			}
 			
 			# Assign a stage start point at 2.5m above user's lowest y value
@@ -1174,8 +1174,8 @@ class riverslice extends frontControllerApplication
 	
 	
 	# Function to display error messages
-	#!# Rework this to put the errors messages directly in the calling code
-	public function throwError ($errorNumber)
+	#!# Rework this to put the errors messages directly in the calling code, and eliminate this function
+	public function throwError ($errorNumber, $diagnosisDetails = '' /* Unused but required argument to match frontController signature */)
 	{
 		# Specify particular reusable phrases
 		$goBack = " Please go back to correct your data and try again.";
