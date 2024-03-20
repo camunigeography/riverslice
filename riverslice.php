@@ -1251,7 +1251,7 @@ class riverslice extends frontControllerApplication
 				<li>Please address any questions on the equations, calculations and theoretical aspects to Ren&eacute;e Kidson; please address any script/web questions to the Webmaster.</li>
 			</ul>
 			<br />
-			<p>The <a href="https://github.com/camunigeog/riverslice/" target="_blank">code of this facility</a> is available freely under the GPL open source licence.</p>
+			<p>The <a href="https://github.com/camunigeography/riverslice/" target="_blank">code of this facility</a> is available freely under the GPL open source licence.</p>
 		';
 		
 		# Show the HTML
