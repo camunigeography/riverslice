@@ -27,7 +27,7 @@ class riverslice extends frontControllerApplication
 		$actions = array (
 			'about' => array (
 				'description' => 'About this facility',
-				'url' => 'about.html',
+				'url' => 'about/',
 				'tab' => 'About this facility',
 			),
 		);
@@ -938,7 +938,7 @@ class riverslice extends frontControllerApplication
 	{
 		# Build up a text string containing the HTML
 		#!# This is not ideal - would be better to have CSV output
-		$exportHtml = "\n" . '<form method="post" action="export.html">';
+		$exportHtml = "\n" . '<form method="post" action="export/">';
 		$exportHtml .= "\n\t" . '<input type="hidden" name="html" value="' . htmlspecialchars ($html) . '" />';
 		$exportHtml .= "\n\t" . '<input value="Export this data to Excel &nbsp; &nbsp;[Alt+e]" accesskey="e" type="submit" class="button" />';
 		$exportHtml .= "\n</form>\n";

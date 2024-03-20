@@ -12,8 +12,9 @@
 	Use MacroFrontControllerApplication "$baseUrl/" "Riverslice"
 	
 	# Application routing
-	RewriteRule ^$baseUrl/about.html $baseUrl/index.html?action=about [L]
-	RewriteRule ^$baseUrl/export.html $baseUrl/index.html?export [L]
+	RewriteRule ^$baseUrl/about/ $baseUrl/index.html?action=about [L]
+	RewriteRule ^$baseUrl/export/ $baseUrl/index.html?export [L]
+	RedirectMatch permanent ^$baseUrl/(about|export)$ $baseUrl/$1/
 	
 	# Exporting, ensuring there is no auto-prepended/appended content
 	<Location $baseUrl/export.html>
