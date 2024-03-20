@@ -1,7 +1,6 @@
 <?php
 
 # Class to create an online River Slice - Channel Hydraulic Geometry calculation tool
-require_once ('frontControllerApplication.php');
 class riverslice extends frontControllerApplication
 {
 	# Function to assign defaults additional to the general application defaults

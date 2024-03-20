@@ -4,7 +4,7 @@
 $settings = array ();
 
 # Load and run the application with the above settings
-require_once ('riverslice.php');
+require_once ('vendor/autoload.php');
 new riverslice ($settings);
 
 ?>

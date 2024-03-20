@@ -1,0 +1,14 @@
+{
+    "name": "camunigeography/riverslice",
+    "description": "Riverslice - Channel hydraulic geometry calculation tool",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "minimum-stability": "stable",
+    "require": {
+        "libpurecontent/frontcontrollerapplication": "^1.13",
+        "libpurecontent/application": "^1.9"
+    },
+    "autoload": {
+        "files": ["riverslice.php"]
+    }
+}

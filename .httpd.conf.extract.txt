@@ -3,15 +3,10 @@
 # Load using:
 #	# Riverslice
 #	Include /path/to/riverslice/.httpd.conf.extract.txt
-#	Use MacroRiverslice /calculators/riverslice "/path/to/riverslice" "/path/to/site/:/path/to/riverslice/:/path/to/php/libraries/"
+#	Use MacroRiverslice /calculators/riverslice "/path/to/riverslice"
 
 
-<Macro MacroRiverslice $baseUrl $repoPath $includePath>
-	
-	# Include path
-	<Location $baseUrl>
-		php_value include_path "$includePath"
-	</Location>
+<Macro MacroRiverslice $baseUrl $repoPath>
 	
 	# Front controller application support
 	Use MacroFrontControllerApplication "$baseUrl/" "Riverslice"
